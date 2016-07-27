@@ -15,3 +15,15 @@ task :package do
 	puts "We're packaging now"
 	# `jar cf my_application.jar my_application`
 end
+
+desc "Deploy the software"
+task :deploy do
+	puts "We're deploying now"
+	# `jar cf my_application.jar my_application`
+end
+
+desc "Functional Test the software"
+task :FunctionalTests do
+	puts "We're running functional tests now"
+	# `jar cf my_application.jar my_application`
+end
