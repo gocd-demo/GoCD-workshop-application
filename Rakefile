@@ -24,6 +24,7 @@ end
 
 desc "Functional Test the software"
 task :FunctionalTests do
-	puts "We're running functional tests now"
+	sh 'echo "Testing job $GO_JOB_RUN_INDEX of $GO_JOB_RUN_COUNT"'
+	# puts "We're running functional tests now"
 	# `jar cf my_application.jar my_application`
 end
