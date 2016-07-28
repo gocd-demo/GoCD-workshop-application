@@ -1,0 +1,32 @@
+pipelines:
+  Application:
+    group: Development
+
+    materials:
+      AppGit:
+        git: https://github.com/gocd-demo/2016-workshop.git
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: rake
+                    arguments:
+                      - build
+      - unit_test:
+          jobs:
+            unit_test:
+              tasks:
+                - exec:
+                    command: rake
+                    arguments:
+                      - unit_test
+      - package:
+          jobs:
+            package:
+              tasks:
+                - exec:
+                    command: rake
+                    arguments:
+                      - package
