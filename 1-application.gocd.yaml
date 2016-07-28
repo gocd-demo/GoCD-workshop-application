@@ -11,9 +11,7 @@ pipelines:
             build:
               tasks:
                 - exec:
-                    command: rake
-                    arguments:
-                      - build
+                    command: ./build_application.sh
       - unit_test:
           jobs:
             unit_test:
