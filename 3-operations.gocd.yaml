@@ -1,0 +1,56 @@
+pipelines:
+  Staging:
+    group: Operations
+    locking: on
+
+    materials:
+      uat:
+        pipeline: UserAcceptance
+        stage: Approved
+      functional_testing:
+        pipeline: FunctionalTesting
+        stage: FunctionalTests
+
+    stages:
+      - DeployApplications:
+          jobs:
+            deploy:
+              tasks:
+                - exec:
+                    command: echo
+      - VerifyDeployment:
+          jobs:
+            verify:
+              tasks:
+                - exec:
+                    command: echo
+
+
+  Production:
+    group: Operations
+    locking: on
+
+    materials:
+      uat:
+        pipeline: Staging
+        stage: VerifyDeployment
+      security:
+        pipeline: SecurityTests
+        stage: TestSecurity
+      performance:
+        pipeline: PerformanceTests
+        stage: SoakTest
+
+    stages:
+      - DeployApplications:
+          jobs:
+            deploy:
+              tasks:
+                - exec:
+                    command: echo
+      - VerifyDeployment:
+          jobs:
+            verify:
+              tasks:
+                - exec:
+                    command: echo
