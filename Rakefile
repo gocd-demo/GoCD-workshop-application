@@ -1,7 +1,7 @@
 
 desc "Build the software"
 task :build do
-	puts "We're building now"
+	sh './build_application.sh'
 	# `touch my_application`
 end
 
