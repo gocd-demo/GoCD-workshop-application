@@ -12,6 +12,7 @@ pipelines:
 
     stages:
       - DeployApplications:
+          clean_workspace: yes
           jobs:
             deploy:
               tasks:
@@ -20,6 +21,7 @@ pipelines:
                     arguments:
                       - FunctionalTesting
       - FunctionalTests:
+          clean_workspace: yes
           jobs:
             runTests:
               run_instances: 3
