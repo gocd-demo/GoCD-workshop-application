@@ -26,7 +26,7 @@ pipelines:
             runTests:
               run_instances: 3
               artifacts:
-                - test:
+                - build:
                     source: testoutput
               tasks:
                 - exec:
