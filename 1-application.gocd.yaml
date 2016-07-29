@@ -31,3 +31,6 @@ pipelines:
                     source: output
                 - exec:
                     command: ./package_application.sh
+              artifacts:
+                - build:
+                    source: installer
