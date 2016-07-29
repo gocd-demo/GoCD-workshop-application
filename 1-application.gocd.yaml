@@ -20,9 +20,7 @@ pipelines:
             unit_test:
               tasks:
                 - exec:
-                    command: rake
-                    arguments:
-                      - unit_test
+                    command: ./unit_test_application.sh
       - package:
           jobs:
             package:
@@ -32,6 +30,4 @@ pipelines:
                     job: build
                     source: output
                 - exec:
-                    command: rake
-                    arguments:
-                      - package
+                    command: ./package_application.sh
