@@ -23,11 +23,16 @@ pipelines:
           jobs:
             runTests:
               run_instances: 3
+              artifacts:
+                - test:
+                    source: output
               tasks:
                 - exec:
                     command: ./functional_test/functional_test.sh
                     arguments:
                       - FunctionalTests
+              tabs:
+                report: output/output.txt
 
   UserAcceptance:
     group: Development
