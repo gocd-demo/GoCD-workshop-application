@@ -12,6 +12,8 @@ pipelines:
               tasks:
                 - exec:
                     command: ./build_application.sh
+                    artifacts:
+                      source: output
       - unit_test:
           jobs:
             unit_test:
