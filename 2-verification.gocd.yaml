@@ -16,16 +16,16 @@ pipelines:
             deploy:
               tasks:
                 - exec:
-                    command: rake
+                    command: ./deploy_application.sh
                     arguments:
-                      - deploy
+                      - FunctionalTesting
       - FunctionalTests:
           jobs:
             runTests:
               run_instances: 3
               tasks:
                 - exec:
-                    command: rake
+                    command: ./functional_test/functional_test.sh
                     arguments:
                       - FunctionalTests
 
@@ -55,9 +55,9 @@ pipelines:
             deploy:
               tasks:
                 - exec:
-                    command: rake
+                    command: ./deploy/deploy_application.sh
                     arguments:
-                      - deploy
+                      - UserAcceptance
       - Approved:
           approval:
             type: manual
