@@ -12,9 +12,9 @@ pipelines:
               tasks:
                 - exec:
                     command: ./build_application.sh
-                    artifacts:
-                      - build:
-                          source: output
+              artifacts:
+                - build:
+                    source: output
       - unit_test:
           jobs:
             unit_test:
