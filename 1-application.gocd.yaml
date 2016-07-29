@@ -11,7 +11,7 @@ pipelines:
             build:
               tasks:
                 - exec:
-                    command: ./build_application.sh
+                    command: ./application/build_application.sh
               artifacts:
                 - build:
                     source: output
@@ -20,7 +20,7 @@ pipelines:
             unit_test:
               tasks:
                 - exec:
-                    command: ./unit_test_application.sh
+                    command: ./application/unit_test_application.sh
       - package:
           jobs:
             package:
@@ -30,7 +30,7 @@ pipelines:
                     job: build
                     source: output
                 - exec:
-                    command: ./package_application.sh
+                    command: ./application/package_application.sh
               artifacts:
                 - build:
                     source: installer
