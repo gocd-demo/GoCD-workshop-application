@@ -16,7 +16,7 @@ pipelines:
             deploy:
               tasks:
                 - exec:
-                    command: ./deploy_application.sh
+                    command: ./deploy/deploy_application.sh
                     arguments:
                       - FunctionalTesting
       - FunctionalTests:
