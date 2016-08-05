@@ -19,6 +19,7 @@ pipelines:
                 - fetch:
                     pipeline: Application
                     stage: package
+                    job: package
                     source: installer
                 - exec:
                     command: echo
