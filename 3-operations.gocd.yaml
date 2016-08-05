@@ -24,6 +24,8 @@ pipelines:
                 - exec:
                     command: echo
       - VerifyDeployment:
+          approval:
+            type: manual
           jobs:
             verify:
               tasks:
