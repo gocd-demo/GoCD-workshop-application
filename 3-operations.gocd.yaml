@@ -10,6 +10,9 @@ pipelines:
       functional_testing:
         pipeline: FunctionalTesting
         stage: FunctionalTests
+      application:
+        pipeline: Application
+        stage: package
 
     stages:
       - DeployApplications:
