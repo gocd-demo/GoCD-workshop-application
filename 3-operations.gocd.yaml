@@ -17,7 +17,7 @@ pipelines:
             deploy:
               tasks:
                 - fetch:
-                    pipeline: UserAcceptance/Application
+                    pipeline: Application/UserAcceptance
                     stage: package
                     job: package
                     source: installer
