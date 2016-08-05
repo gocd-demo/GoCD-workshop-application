@@ -10,9 +10,6 @@ pipelines:
       functional_testing:
         pipeline: FunctionalTesting
         stage: FunctionalTests
-      application:
-        pipeline: Application
-        stage: package
 
     stages:
       - DeployApplications:
@@ -20,7 +17,7 @@ pipelines:
             deploy:
               tasks:
                 - fetch:
-                    pipeline: Application
+                    pipeline: UserAcceptance/Application
                     stage: package
                     job: package
                     source: installer
