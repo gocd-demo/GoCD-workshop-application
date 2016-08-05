@@ -18,7 +18,8 @@ pipelines:
               tasks:
                 - fetch:
                     pipeline: Application
-                    stage: installer
+                    stage: package
+                    source: installer
                 - exec:
                     command: echo
       - VerifyDeployment:
