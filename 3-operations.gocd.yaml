@@ -21,6 +21,7 @@ pipelines:
                     stage: package
                     job: package
                     source: installer
+                    destination: installer
                 - exec:
                     command: echo
       - VerifyDeployment:
