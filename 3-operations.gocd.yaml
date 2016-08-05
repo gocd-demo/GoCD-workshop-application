@@ -26,7 +26,7 @@ pipelines:
                     arguments:
                       - -c
                       - tar
-                      - xfvz
+                      - -xfvz
                       - installer/output.tgz
       - VerifyDeployment:
           approval:
