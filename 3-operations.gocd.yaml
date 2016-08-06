@@ -22,10 +22,9 @@ pipelines:
                     job: package
                     source: installer
                 - exec:
-                    command: /bin/bash
+                    command: echo
                     arguments:
-                      - -c
-                      - "tar xfvz installer/output.tgz"
+                      - "Deploying Applications"
       - VerifyDeployment:
           approval:
             type: manual
