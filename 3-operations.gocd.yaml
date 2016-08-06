@@ -27,7 +27,7 @@ pipelines:
                       - "Deploying Applications"
       - VerifyDeployment:
           approval:
-            type: manual
+            type: success
           jobs:
             verify:
               tasks:
