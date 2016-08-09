@@ -20,7 +20,7 @@ pipelines:
             unit_test:
               tasks:
                 - exec:
-                    command: python
+                    command: py.test
                     arguments:
                       - "./unit_test/python_test.py"
       - package:
