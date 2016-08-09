@@ -25,7 +25,8 @@ pipelines:
                       - --junitxml
                       - minified-output.xml
                       - "./unit_test/python_test.py"
-                      - xmllint
+                    command: xmllint
+                    arguments:
                       - --format
                       - minified-output.xml
                       - >
