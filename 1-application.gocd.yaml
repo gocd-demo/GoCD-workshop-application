@@ -20,7 +20,9 @@ pipelines:
             unit_test:
               tasks:
                 - exec:
-                    command: ./application/unit_test_application.sh
+                    command: python
+                    arguments:
+                      - "./unit_test/python_test.py"
       - package:
           jobs:
             package:
