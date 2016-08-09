@@ -1,11 +1,18 @@
-import unittest
+# tests.py
 
-def fun(x):
-    return x + 1
+import random
+try:
+    import unittest2 as unittest
+except ImportError:
+    import unittest
 
-class MyTest(unittest.TestCase):
-    def test(self):
-        self.assertEqual(fun(2), 4)
+class SimpleTest(unittest.TestCase):
+    @unittest.skip("demonstrating skipping")
+    def test_skipped(self):
+        self.fail("shouldn't happen")
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_pass(self):
+        self.assertEqual(10, 7 + 3)
+
+    def test_fail(self):
+        self.assertEqual(11, 7 + 3)
