@@ -29,7 +29,7 @@ pipelines:
                     arguments:
                       - --format
                       - minified-output.xml
-                      - >
+                      - ">"
                       - testoutput.xml
               artifacts:
                 - test:
