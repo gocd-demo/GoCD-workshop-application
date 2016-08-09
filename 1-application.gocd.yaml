@@ -22,7 +22,12 @@ pipelines:
                 - exec:
                     command: py.test
                     arguments:
+                      - --junitxml
+                      - testoutput.xml
                       - "./unit_test/python_test.py"
+              artifacts:
+                - test:
+                  source: testoutput.xml
       - package:
           jobs:
             package:

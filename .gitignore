@@ -2,3 +2,4 @@ output
 installer
 testoutput
 *__pycache__*
+*testoutput.xml*
