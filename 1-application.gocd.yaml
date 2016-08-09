@@ -23,8 +23,13 @@ pipelines:
                     command: py.test
                     arguments:
                       - --junitxml
-                      - testoutput.xml
+                      - minified-output.xml
                       - "./unit_test/python_test.py"
+                      - xmllint
+                      - --format
+                      - minified-output.xml
+                      - >
+                      - testoutput.xml
               artifacts:
                 - test:
                     source: testoutput.xml
