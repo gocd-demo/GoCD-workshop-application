@@ -23,14 +23,11 @@ pipelines:
                 - exec:
                     command: /bin/bash
                     arguments:
-                      - -l
                       - -c
-                      - bundle
-                      - install
+                      - "rbenv init; bundle install"
                 - exec:
                     command: /bin/bash
                     arguments:
-                      - -l
                       - -c
                       - ruby
                       - unit_test/ruby_test.rb
