@@ -24,7 +24,7 @@ pipelines:
                     command: /bin/bash
                     arguments:
                       - -c
-                      - "~go/.rbenv/bin/init; bundle install"
+                      - "bundle install"
                 - exec:
                     command: /bin/bash
                     arguments:
