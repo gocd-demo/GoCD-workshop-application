@@ -23,12 +23,14 @@ pipelines:
                 - exec:
                     command: /bin/bash
                     arguments:
+                      - -
                       - -c
                       - bundle
                       - install
                 - exec:
                     command: /bin/bash
                     arguments:
+                      - -
                       - -c
                       - ruby
                       - unit_test/ruby_test.rb
