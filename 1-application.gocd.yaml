@@ -5,6 +5,7 @@ pipelines:
     materials:
       AppGit:
         git: https://github.com/gocd-demo/2016-workshop.git
+        branch: add_unit_tests
     stages:
       - build:
           jobs:
