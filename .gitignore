@@ -3,3 +3,5 @@ installer
 testoutput
 *__pycache__*
 *testoutput.xml*
+Gemfile.lock
+report.xml

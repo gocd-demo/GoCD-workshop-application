@@ -21,7 +21,15 @@ pipelines:
             unit_test:
               tasks:
                 - exec:
-                    command: echo
+                    command: bundle
+                    arguments:
+                      - install
+                - exec:
+                    command: ruby
+                    arguments:
+                      - unit_test/ruby_test.rb
+                      - --junit
+                    
       - package:
           jobs:
             package:
