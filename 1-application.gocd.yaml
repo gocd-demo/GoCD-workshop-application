@@ -16,7 +16,6 @@ pipelines:
                 - build:
                     source: output
       - unit_test:
-          clean_workspace: true
           jobs:
             unit_test:
               artifacts:
