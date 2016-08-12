@@ -7,7 +7,7 @@ class TestMath < Minitest::Test
   end
 
   def test_math_should_fail
-    assert_equal 2, 2
+    assert_equal 2, 3
   end
 
 end
