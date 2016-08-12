@@ -20,6 +20,9 @@ pipelines:
           clean_workspace: true
           jobs:
             unit_test:
+              artifacts:
+                - test:
+                  source: report.xml
               tasks:
                 - exec:
                     command: /bin/bash
