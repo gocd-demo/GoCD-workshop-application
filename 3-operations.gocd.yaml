@@ -22,9 +22,9 @@ pipelines:
                     job: package
                     source: installer
                 - exec:
-                    command: echo
+                    command: ./deploy/deploy_application.sh
                     arguments:
-                      - "Deploying Applications"
+                      - Stag
       - VerifyDeployment:
           approval:
             type: success
@@ -56,7 +56,9 @@ pipelines:
             deploy:
               tasks:
                 - exec:
-                    command: echo
+                    command: ./deploy/deploy_application.sh
+                    arguments:
+                      - Production
       - VerifyDeployment:
           jobs:
             verify:
