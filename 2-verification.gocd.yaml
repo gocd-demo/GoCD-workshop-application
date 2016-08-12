@@ -67,7 +67,7 @@ pipelines:
                       - UserAcceptance
       - Approved:
           approval:
-            type: success
+            type: manual
           jobs:
             approve:
               tasks:
