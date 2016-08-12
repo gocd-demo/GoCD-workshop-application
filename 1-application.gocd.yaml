@@ -22,7 +22,7 @@ pipelines:
             unit_test:
               artifacts:
                 - test:
-                  source: report.xml
+                    source: report.xml
               tasks:
                 - exec:
                     command: /bin/bash
