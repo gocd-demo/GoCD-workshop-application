@@ -25,6 +25,10 @@ pipelines:
                     source: report.xml
               tasks:
                 - exec:
+                    command: eval
+                    arguments:
+                      - "$(rbenv init -)"
+                - exec:
                     command: /bin/bash
                     arguments:
                       - -c
