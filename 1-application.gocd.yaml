@@ -30,9 +30,7 @@ pipelines:
                     command: /bin/bash
                     arguments:
                       - -c
-                      - ruby
-                      - unit_test/ruby_test.rb
-                      - --junit
+                      - "ruby unit_test/ruby_test.rb --junit"
 
       - package:
           jobs:
