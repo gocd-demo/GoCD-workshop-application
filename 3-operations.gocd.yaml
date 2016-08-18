@@ -29,7 +29,8 @@ pipelines:
                 - exec:
                     command: /bin/bash
                     arguments:
-                      - -c "./deploy/deploy_application.sh Staging"
+                      - -c
+                      - "./deploy/deploy_application.sh Staging"
       - VerifyDeployment:
           approval:
             type: success
@@ -73,7 +74,8 @@ pipelines:
                 - exec:
                     command: /bin/bash
                     arguments:
-                      - -c "./deploy/deploy_application.sh Production"
+                      - -c
+                      - "./deploy/deploy_application.sh Production"
       - VerifyDeployment:
           jobs:
             verify:
