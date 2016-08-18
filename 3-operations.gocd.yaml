@@ -4,6 +4,8 @@ pipelines:
     locking: on
 
     materials:
+      AppGit:
+        git: https://github.com/gocd-demo/2016-workshop.git
       uat:
         pipeline: UserAcceptance
         stage: Approved
@@ -24,7 +26,7 @@ pipelines:
                 - exec:
                     command: ./deploy/deploy_application.sh
                     arguments:
-                      - Stag
+                      - Staging
       - VerifyDeployment:
           approval:
             type: success
