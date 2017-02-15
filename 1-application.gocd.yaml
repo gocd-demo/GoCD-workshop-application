@@ -23,10 +23,7 @@ pipelines:
                     source: report.xml
               tasks:
                 - exec:
-                    command: /bin/bash
-                    arguments:
-                      - -c
-                      - ./unit_test/unit_test.sh
+                    command: ./application/unit_test_application.sh
       - package:
           jobs:
             package:
