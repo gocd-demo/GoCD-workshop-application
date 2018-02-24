@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-sh deploy/stop_server.sh
-
 case "$DEPLOY_ENVIRONMENT" in
 
 	# Our development environment is single machine
@@ -35,6 +33,7 @@ case "$DEPLOY_ENVIRONMENT" in
 
 	# Our production environment is 200 machines
 	production)
+		sh deploy/stop_server.sh
 		echo "Deploying to production"
 		echo "Number of machines set to 200"
 		sh -c "cd application/hello-world/; npm install --production; SERVER_PORT=3000 nohup node hello_world.js &"
