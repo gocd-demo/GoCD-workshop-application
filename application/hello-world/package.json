@@ -1,0 +1,24 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "\"A hello world application using Node and Express.\"",
+  "main": "hello_world.js",
+  "dependencies": {
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test nyc --reporter=html mocha 'test/test.js'",
+    "start": "node hello_world.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Varsha Varadarajan",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1",
+    "request": "^2.83.0"
+  }
+}
