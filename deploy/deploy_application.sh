@@ -2,7 +2,9 @@
 set -e
 
 stop_server() {
-	kill $(lsof -t -i:$1)
+	if [ ! -z $(lsof -t -i:$1) ]; then
+		kill $(lsof -t -i:$1)
+	fi
 }
 
 case "$DEPLOY_ENVIRONMENT" in
