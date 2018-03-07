@@ -14,7 +14,6 @@ step("Check title is <word>", async (word) => {
   assert.equal(t, word)
 })
 
-
 step("Check <word> text", async (word) => {
  text_to_assert_on = await text(word).exists();
  assert.equal(text_to_assert_on, true)
