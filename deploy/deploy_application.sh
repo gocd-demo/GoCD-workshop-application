@@ -43,7 +43,6 @@ case "$DEPLOY_ENVIRONMENT" in
 
 	# Our production environment is 200 machines
 	production)
-		sh deploy/stop_server.sh
 		echo "Deploying to production"
 		echo "Number of machines set to 200"
 		stop_server 3000
