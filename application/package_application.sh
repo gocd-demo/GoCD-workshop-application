@@ -2,4 +2,4 @@
 set -e
 
 mkdir -p installer
-tar cfvz installer/output.tgz output
+tar cfvz installer/output.tgz application/hello-world

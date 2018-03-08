@@ -5,3 +5,7 @@ testoutput
 *testoutput.xml*
 Gemfile.lock
 report.xml
+functional_tests/.gauge
+functional_tests/logs
+functional_tests/reports
+**/node_modules

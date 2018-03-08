@@ -1,0 +1,17 @@
+body {
+  background-color: #061F2F;
+  font-family: monospace;
+  color: #cccccc;
+  margin: 20% auto;
+}
+
+.center {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+hr {
+  color: #FF5733;
+  border-style: dashed;
+}
