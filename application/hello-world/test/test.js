@@ -2,7 +2,7 @@ var request = require("request");
 var assert = require("assert");
 var helloWorld = require("../hello_world.js");
 
-var base_url = "http://localhost:3000/"
+var base_url = "http://localhost:4000/"
 
 describe("Hello World Server", function() {
   describe("GET /", function() {

@@ -8,7 +8,7 @@
     "express-handlebars": "^3.0.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test SERVER_PORT=3000 nyc --reporter=html mocha 'test/test.js'",
+    "test": "NODE_ENV=test SERVER_PORT=4000 nyc --reporter=html mocha 'test/test.js'",
     "start": "node hello_world.js"
   },
   "keywords": [
